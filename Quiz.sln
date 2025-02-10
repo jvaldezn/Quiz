@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Web", "Quiz.Web\Quiz.Web.csproj", "{14C3FB21-C78D-4AC8-AFC8-A7CF10BB2272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Domain", "Quiz.Domain\Quiz.Domain.csproj", "{149EACA1-2F39-4462-B532-8E65BEA4AF54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Infrastructure", "Quiz.Infrastructure\Quiz.Infrastructure.csproj", "{1CBCD1A8-7E5E-40B4-8A28-9EA7857891FD}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{CEDB0FC0-2F3A-4216-8DA5-C8DDBD2C84FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14C3FB21-C78D-4AC8-AFC8-A7CF10BB2272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C3FB21-C78D-4AC8-AFC8-A7CF10BB2272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C3FB21-C78D-4AC8-AFC8-A7CF10BB2272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C3FB21-C78D-4AC8-AFC8-A7CF10BB2272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{149EACA1-2F39-4462-B532-8E65BEA4AF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149EACA1-2F39-4462-B532-8E65BEA4AF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149EACA1-2F39-4462-B532-8E65BEA4AF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149EACA1-2F39-4462-B532-8E65BEA4AF54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CBCD1A8-7E5E-40B4-8A28-9EA7857891FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CBCD1A8-7E5E-40B4-8A28-9EA7857891FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CBCD1A8-7E5E-40B4-8A28-9EA7857891FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CBCD1A8-7E5E-40B4-8A28-9EA7857891FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEDB0FC0-2F3A-4216-8DA5-C8DDBD2C84FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEDB0FC0-2F3A-4216-8DA5-C8DDBD2C84FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEDB0FC0-2F3A-4216-8DA5-C8DDBD2C84FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEDB0FC0-2F3A-4216-8DA5-C8DDBD2C84FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

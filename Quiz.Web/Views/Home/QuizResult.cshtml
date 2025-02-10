@@ -1,0 +1,36 @@
+﻿@model Quiz.Web.ViewModel.CandidateViewModel
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary">Candidato Sugerido</h2>
+
+    @if (Model != null)
+    {
+        <div class="card shadow-lg p-4 mt-4">
+            <div class="card-body text-center">
+                <h3 class="text-success">En base a tus respuestas, sugerimos el siguiente candidato:</h3>
+                <p class="fw-bold fs-5"><strong>Nombre del candidato:</strong> @Model.CandidateName</p>
+                <p class="fs-5"><strong>Porcentaje de match:</strong> <span class="text-primary">@Model.CandidatePercent%</span></p>
+
+                @if (!string.IsNullOrEmpty(Model.ImageName))
+                {
+                    <div class="d-flex justify-content-center">
+                        <img src="@Url.Content("~/images-candidates/" + Model.ImageName)"
+                             alt="@Model.CandidateName"
+                             class="img-fluid rounded shadow-lg mt-3"
+                             style="max-width: 250px;" />
+                    </div>
+                }
+                else
+                {
+                    <p class="text-muted mt-3">No hay imagen disponible para este candidato.</p>
+                }
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning text-center mt-4">
+            <p>No se encontró un candidato que coincida con tus respuestas.</p>
+        </div>
+    }
+</div>

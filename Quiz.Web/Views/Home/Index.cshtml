@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Quiz";
+    @model List<Quiz.Web.ViewModel.QuestionViewModel>
+    int index = 0;
+}
+
+<div class="container mt-4">
+    <h1 class="text-center">Quiz</h1>
+    <h4 class="text-center text-muted">Responda las siguientes preguntas</h4>
+
+    @using (Html.BeginForm("SubmitQuiz", "Home", FormMethod.Post, new { @class = "mt-4" }))
+    {
+        <div class="card shadow-lg p-4">
+            @foreach (var question in Model)
+            {
+                <div class="form-group mb-3">
+                    <label class="form-label fw-bold">@question.QuestionText</label>
+                    <input type="hidden" name="Answers[@index].QuestionId" value="@Model[index].QuestionId" />
+                    <select class="form-select" name="Answers[@index].AnswerId">
+                        @foreach (var answer in question.Answers!)
+                        {
+                            <option value="@answer.AnswerId">@answer.AnswerText</option>
+                        }
+                    </select>
+                </div>
+                index++;
+            }
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        </div>
+    }
+</div>
