@@ -11,3 +11,11 @@ services:
       - SA_PASSWORD=password@12345#
     ports:
       - 1433:1433
+  db-init:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    network_mode: service:quizdb
+    command: bash -c 'until /opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P password@12345# -i "init.sql"; do echo retry && sleep 1; done'
+    volumes:
+      - ./init.sql:/init.sql
+    depends_on:
+      - quizdb
